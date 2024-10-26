@@ -10,7 +10,7 @@ import (
 )
 
 type VerifyResult struct {
-	Time time.Time
+	Time time.Time `json:"time"`
 
 	Broken       []string `json:"broken"`
 	Missing      []string `json:"missing"`
