@@ -11,7 +11,6 @@ import (
 	"fmt"
 	"hash"
 	"io"
-	"log"
 	"math/big"
 	"os"
 	"path"
@@ -109,7 +108,6 @@ func (state *readState) run() error {
 		for _, entry := range metadata.Files {
 			f, err := state.openFile(entry.DPath)
 			if err != nil {
-				log.Println(entry.SPath+":", "skipping file:", err)
 				continue
 			}
 
